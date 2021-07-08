@@ -100,7 +100,7 @@ export default {
 
   data: () => ({
     bookList: [],
-    coverURL: "https://bookvuejs.herokuapp.com/",
+    coverURL: "http://localhost:3000",
     idCategory: "",
     cateList: [],
   }),

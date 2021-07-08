@@ -152,7 +152,7 @@ export default {
     ],
     listItem: [],
     deletedIndex: -1,
-    coverURL: "https://bookvuejs.herokuapp.com/",
+    coverURL: "http://localhost:3000",
     uID: "",
     rolecheck: false
   }

@@ -146,7 +146,7 @@ export default {
     if (result.data.code === 200) {
       this.bookUpdate = result.data.book;
     }
-    this.coverURL = "https://bookvuejs.herokuapp.com/".concat(this.bookUpdate.cover[0]);
+    this.coverURL = "http://localhost:3000".concat(this.bookUpdate.cover[0]);
     this.title = this.bookUpdate.title;
     this.description = this.bookUpdate.description;
     this.author = this.bookUpdate.author;
