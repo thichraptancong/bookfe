@@ -67,9 +67,8 @@
   </v-container>
 </template>
 <script>
-import { categoriesApi } from "../../../apis";
-
 import { mapMutations } from "vuex";
+import { categoriesApi } from "../../../apis";
 
 export default {
   name: "ListCategory",
@@ -106,7 +105,7 @@ export default {
       },
     ],
     listItem: [],
-    deletedIndex: -1
+    deletedIndex: -1,
   }),
   watch: {
     options: {
@@ -146,28 +145,28 @@ export default {
         this.totalPassengers = totalDocs;
         this.listItem = category;
       }
-      this.setCategoryList(this.listItem)
+      this.setCategoryList(this.listItem);
     },
     editCategory: function (param) {
       this.$router.push({ path: "/category/updatecate/" + param });
     },
-    async deleteItem (item) {
-        if (confirm("Confirm delete ?")) {
-        const result = await categoriesApi.deletecate(item)
+    async deleteItem(item) {
+      if (confirm("Confirm delete ?")) {
+        const result = await categoriesApi.deletecate(item);
         if (result.data.code === 200) {
-            this.$notificate.showMessage({
-              content: result.data.message,
-              color: "info",
-            });
-            this.$router.go("/category/listcate");
-          } else {
-            this.$notificate.showMessage({
-              content: result.data.message,
-              color: "info",
-            });
-          }
+          this.$notificate.showMessage({
+            content: result.data.message,
+            color: "info",
+          });
+          this.$router.go("/category/listcate");
+        } else {
+          this.$notificate.showMessage({
+            content: result.data.message,
+            color: "info",
+          });
         }
       }
+    },
   },
 };
 </script>

@@ -4,8 +4,8 @@ const router = require('../router').default
 
 // Set config defaults when creating the instance
 const instance = axios.create({
-    baseURL: 'https://bookvuejs.herokuapp.com/'
-        // baseURL: 'http://localhost:3000'
+    // baseURL: 'https://bookvuejs.herokuapp.com/'
+    baseURL: 'http://localhost:3000'
 });
 
 store.subscribe((mutation) => {

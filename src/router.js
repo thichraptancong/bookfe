@@ -110,6 +110,7 @@ const router = new Router({
                     path: 'book/listbook',
                     component: () =>
                         import ('@/views/dashboard/book/listbook')
+
                 },
                 {
                     name: 'Book Add',
